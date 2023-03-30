@@ -36,3 +36,15 @@ Ad esempio:
 - Proviamo sempre prima con dei `console.log()` per capire se stiamo ricevendo i dati giusti.
 
 - Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+---
+
+## STEPS
+
+1. Copiare la grigia fatta precedentemente copiando direttante i file dentro la cartella;
+2. Aggiustare la `select` e il `button` *play*;
+3. Creare la funzione `reset` da aggiungere al **click** del pulsante _play_;
+4. Creare un `array` con i valori della `select`;
+5. Creare una variabile per i punti;
+6. Aggiustare il **click** sulla cella che può ripetersi una sola volta perciò aggiungere `.removeEventListene` per poter gestire l'incremento dei punti;
+7. 
