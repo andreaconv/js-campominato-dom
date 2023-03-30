@@ -48,3 +48,7 @@ Ad esempio:
 5. Creare una variabile per i punti;
 6. Aggiustare il **click** sulla cella che può ripetersi una sola volta perciò aggiungere `.removeEventListene` per poter gestire l'incremento dei punti;
 7. 
+
+## AUTOVALUTAZIONE
+
+Ho strutturato male lo script del progetto ed ora l'unica cosa che mi viene da pensare è di farlo tutto da capo. Sono così tante cose da fare che non so da dove cominciare ma soprattutto la maggior parte delle cose non so neanche come si fanno.
