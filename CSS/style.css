@@ -1,0 +1,96 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 100vh;
+  color: white;
+}
+
+:root{
+  --easy: calc(100% / 10);
+  --medium: calc(100% / 9);
+  --hard: calc(100% / 7)
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  /* debug */
+  background-color: rgb(111, 138, 111);
+}
+
+.btn{
+  padding: 5px 10px;
+  margin: 2rem;
+  border-radius: 5px;
+  color: white;
+}
+
+label{
+  background-color: darkgoldenrod;
+}
+
+select{
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+option:nth-child(1){
+  background-color: green;
+}
+option:nth-child(2){
+  background-color: darkorange;
+}
+option:nth-child(3){
+  background-color: darkred;
+}
+
+button{
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 1; */
+  height: calc(100% - 130px);
+  /* debug */
+  background-color: rgb(153, 106, 106);
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  background-color: darkslategray;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.clicked{
+  background: radial-gradient(darkturquoise, darkcyan);
+}
+
+
+footer{
+  height: 60px;
+  /* debug */
+  background-color: rgb(97, 97, 143);
+}
