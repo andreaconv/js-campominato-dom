@@ -88,6 +88,10 @@ main{
   background: radial-gradient(darkturquoise, darkcyan);
 }
 
+.bomb{
+  background: radial-gradient(red, darkred);
+}
+
 
 footer{
   height: 60px;
