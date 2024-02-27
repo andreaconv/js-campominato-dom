@@ -6,33 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="icon" href="595582.png">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet">
   <title>Campo Minato</title>
 </head>
 <body>
 
   <header>
-    <label class="btn" for="livello">SELEZIONA LA DIFFICOLTÀ</label>
+    <label title="livello" class="btn" for="livello">SELEZIONA LA DIFFICOLTÀ</label>
     <select name="livello" id="livello" class="btn">
       <option value="100">EASY</option>
       <option value="81">MEDIUM</option>
       <option value="49">HARD</option>
     </select>
     <button class="btn">START</button>
-
   </header>
-  
 
   <main>
 
+    <div class="score hidden">
+      <span>SCORE</span>
+      <span id="points">00000</span>
+    </div>
+
+    <div class="container hidden">
+
+      <div class="grid"></div>
+
+      <!-- Schermata di fine gioco -->
+      <div class="end-game-screen hidden">
+        <h2 class="end-game-text">Game<br>Over</h2>
+        <button class="play-again" onclick="playAgain()">Gioca ancora</button>
+      </div>
+    </div>
+
+
   </main>
 
-
-  <footer>
-
-  </footer>
-
-
-  <!-- <script src="JS/script.js"></script> -->
-  <script src="JS/script2.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>

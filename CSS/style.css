@@ -4,25 +4,28 @@
   box-sizing: border-box;
 }
 
+/*? UTILS  */ 
+:root{
+  --easy: calc(100% / 10);
+  --medium: calc(100% / 9);
+  --hard: calc(100% / 7);
+  --header-height: 70px;
+  --bg-color-darkgold: darkgoldenrod;
+}
+
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   height: 100vh;
   color: white;
-}
-
-:root{
-  --easy: calc(100% / 10);
-  --medium: calc(100% / 9);
-  --hard: calc(100% / 7)
+  background-color: #1a1a1a;
 }
 
 header{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  /* debug */
-  background-color: rgb(111, 138, 111);
+  height: var(--header-height);
+  background-color: #757575;
 }
 
 .btn{
@@ -33,45 +36,84 @@ header{
 }
 
 label{
-  background-color: darkgoldenrod;
+  background-color: var(--bg-color-darkgold);
 }
 
 select{
-  background-color: darkblue;
+  background-color: var(--bg-color-darkgold);
   cursor: pointer;
+  border: none;
 }
 
-option:nth-child(1){
-  background-color: green;
-}
-option:nth-child(2){
-  background-color: darkorange;
-}
-option:nth-child(3){
-  background-color: darkred;
-}
-
-button{
-  background-color: darkgreen;
+header button{
+  background-color: var(--bg-color-darkgold);
+  border: none;
   cursor: pointer;
 }
 
 main{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* flex-grow: 1; */
-  height: calc(100% - 130px);
-  /* debug */
-  background-color: rgb(153, 106, 106);
+  height: calc(100% - var(--header-height));
+}
+
+.score{
+  width: 90vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.score span{
+  font-size: 2rem;
 }
 
 .container{
-  display: flex;
-  flex-wrap: wrap;
   height: 80%;
   aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.grid{
   background-color: darkslategray;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Schermata di fine gioco */
+.end-game-screen {
+	background-color: rgba(216, 35, 22, 0.411);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.win {
+	background-color: rgba(22, 228, 67, 0.493);
+}
+
+.end-game-text {
+	font-size: 3rem;
+	font-family: 'Press Start 2P', cursive;
+	margin-bottom: 1rem;
+}
+
+.end-game-screen button {
+	border: 2px solid black;
+	font-size: 1.5rem;
+	font-family: 'Darker Grotesque', sans-serif;
+	text-transform: uppercase;
+	padding: 8px 20px ;
+	cursor: pointer;
 }
 
 .box{
@@ -81,20 +123,24 @@ main{
   aspect-ratio: 1 / 1;
   border: 1px solid white;
   cursor: pointer;
-  font-size: 0;
+  /* * se si vuole nascondere il numero dentro la cella   */
+  /* font-size: 0; */
+}
+
+.box:hover{
+  background-color: rgb(27, 92, 177);
 }
 
 .clicked{
   background: radial-gradient(darkturquoise, darkcyan);
+  cursor: not-allowed;
 }
 
 .bomb{
   background: radial-gradient(red, darkred);
+  cursor: not-allowed;
 }
 
-
-footer{
-  height: 60px;
-  /* debug */
-  background-color: rgb(97, 97, 143);
+.hidden{
+  display: none;
 }
